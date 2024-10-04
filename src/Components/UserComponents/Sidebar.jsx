@@ -32,7 +32,7 @@ export default function Sidebar({ onSelectSection }) {
         } transition-transform duration-200 ease-in-out sm:relative sm:translate-x-0 sm:w-40 sm:block w-3/4 z-40`}
       >
         <div className="flex p-4 justify-between">
-          <div className="text-2xl font-bold">Indie Stori</div>
+          <div className="text-2xl font-bold">Organic Matki</div>
           <i
             onClick={() => setIsOpen(false)}
             className="fa-solid fa-xmark text-2xl font-bold cursor-pointer sm:hidden"
@@ -58,7 +58,7 @@ export default function Sidebar({ onSelectSection }) {
             >
               Account
             </li>
-            <li
+            {/* <li
               onClick={() => {
                 onSelectSection("orders");
                 setIsOpen(false);
@@ -66,7 +66,7 @@ export default function Sidebar({ onSelectSection }) {
               className="cursor-pointer mb-2"
             >
               Orders
-            </li>
+            </li> */}
             {/* <li onClick={() => { onSelectSection('addresses'); setIsOpen(false); }} className="cursor-pointer mb-2">Addresses</li> */}
             <li onClick={logoutFunction} className="cursor-pointer mb-2">
               Logout

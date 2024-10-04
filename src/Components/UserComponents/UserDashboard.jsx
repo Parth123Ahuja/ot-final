@@ -24,7 +24,7 @@ export default function UserDashboard() {
     const fetchOrders = async () => {
       try {
         const response = await fetch(apiString + "/orders/fetchorders", {
-          method: "POST",
+          method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
@@ -52,9 +52,9 @@ export default function UserDashboard() {
       case "dashboard":
         return (
           <div className="w-full flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2 px-2 sm:px-4">
+            {/* <div className="w-full md:w-1/2 px-2 sm:px-4">
               <LastOrder orders={orders} />
-            </div>
+            </div> */}
             <div className="w-full">
               <PopularProducts />
             </div>
@@ -66,16 +66,16 @@ export default function UserDashboard() {
             <AccountSection />
           </div>
         );
-      case "orders":
-        return (
-          <div className="w-full">
-            <div className=" px-2 space-y-2 md:space-y-4 overflow-y-auto">
-              {orders.map((order) => (
-                <OrderProduct key={order.id} order={order} />
-              ))}
-            </div>
-          </div>
-        );
+      // case "orders":
+      //   return (
+      //     <div className="w-full">
+      //       {/* <div className=" px-2 space-y-2 md:space-y-4 overflow-y-auto">
+      //         {orders.map((order) => (
+      //           <OrderProduct key={order.id} order={order} />
+      //         ))}
+      //       </div> */}
+      //     </div>
+      //   );
       case "addresses":
         return (
           <div className="w-full">
